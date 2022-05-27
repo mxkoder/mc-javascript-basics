@@ -30,13 +30,19 @@ function roundDown (a) {
   return Math.floor(a);
 }
 
-function absolute (a) {
+function absolute(a) {
   return Math.abs(a);
 }
 
-function quotient (a, b) {
-  // your code here
+function quotient(a, b) {
+  if (a > 0) {
+    return Math.floor(a / b);
+  } else if (a < 0) {
+    return Math.ceil(a / b);
+  }
+  return 0;
 }
+
 
 function remainder (a, b) {
   // your code here
