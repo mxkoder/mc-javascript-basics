@@ -35,12 +35,8 @@ function absolute(a) {
 }
 
 function quotient(a, b) {
-  if (a > 0) {
-    return Math.floor(a / b);
-  } else if (a < 0) {
-    return Math.ceil(a / b);
-  }
-  return 0;
+  return Math.trunc(a / b);
+
 }
 
 
