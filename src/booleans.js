@@ -54,11 +54,11 @@ function isSquare(a) {
 };
 
 function startsWith(char, string) {
-  // your code here
+  return Boolean( string[0] == char);
 };
 
 function containsVowels(string) {
-  // your code here
+  return Boolean(string.match(/[aeiou]/gi));
 };
 
 function isLowerCase(string) {
