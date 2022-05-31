@@ -11,27 +11,25 @@ const csvStringToArray = string => {
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
-const addToArray2 = (element, array) => {
-  // your code here
-};
+const addToArray2 = (element, array) => 
+array.concat([element]);
 
 const removeNthElement = (index, array) => {
-  // your code here
+  array.splice(index, 1);
 };
 
-const numbersToStrings = numbers => {
-  // your code here
-};
+const numbersToStrings = (numbers) => numbers.map(numbers => String(numbers));
+
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  return strings.map(word => word.toUpperCase());
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  return strings.map(word => word.split("").reverse().join(""));
 };
 
 const onlyEven = numbers => {
