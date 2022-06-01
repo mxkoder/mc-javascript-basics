@@ -41,13 +41,14 @@ const removeNthElement2 = (index, array) => {
   newArray.splice(index, 1);
   return newArray;
 
-  /* return array.filter((_, itemIndex) => itemIndex !== index); */
+// MC sol: return array.filter((_, itemIndex) => itemIndex !== index); 
+// syntax - filter((element, index, array) => { /* ... */ } )
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  return strings.filter(strings => /^[aeiou]/i.test(strings));
 };
-
+// /^[aeiou]/i.test(str)
 const removeSpaces = string => {
   // your code here
 };
