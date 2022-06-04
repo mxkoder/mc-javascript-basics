@@ -48,17 +48,20 @@ const removeNthElement2 = (index, array) => {
 const elementsStartingWithAVowel = strings => {
   return strings.filter(strings => /^[aeiou]/i.test(strings));
 };
-// /^[aeiou]/i.test(str)
+
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
-const sumNumbers = numbers => {
-  // your code here
-};
+
+const sumNumbers = numbers => numbers.reduce((total, number) => {
+    return total + number
+  }, 0);
+
 
 const sortByLastLetter = strings => {
-  // your code here
+  let reversedWordArray = strings.map(word => word.split("").reverse().join(""));
+  return (reversedWordArray.sort()).map(word => word.split("").reverse().join(""));
 };
 
 module.exports = {
