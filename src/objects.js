@@ -17,28 +17,27 @@ const hasProperty = (property, object) => {
   return object.hasOwnProperty(property);
 };
 
-const isOver65 = person => {
-  // your code here
-};
+const isOver65 = person => person.age > 65;
 
-const getAges = people => {
-  // your code here
-};
 
-const findByName = (name, people) => {
-  // your code here
-};
+const getAges = people => people.map (person => person.age);
 
-const findHondas = cars => {
-  // your code here
-};
+const findByName = (name, people) => people.find(obj => obj.name === name);
+
+const findHondas = cars => cars.filter (obj => obj.manufacturer === 'Honda');
+
+
 
 const averageAge = people => {
-  // your code here
+  let totalAge = people.reduce((prevAge, currentPerson) => {
+    return prevAge + currentPerson.age;
+  }, 0);
+
+  return totalAge / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  
 };
 
 module.exports = {
